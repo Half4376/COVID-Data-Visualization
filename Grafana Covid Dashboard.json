@@ -1,0 +1,841 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 2,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "marcusolsson-csv-datasource",
+        "uid": "ddqhfanjdep6od"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#8d9fbd",
+            "mode": "fixed"
+          },
+          "custom": {
+            "align": "center",
+            "cellOptions": {
+              "mode": "gradient",
+              "type": "color-background"
+            },
+            "filterable": false,
+            "inspect": false,
+            "minWidth": 50
+          },
+          "decimals": 2,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "deathpercentage"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Death Percentage"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "total_cases"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Total Cases"
+              },
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "775683246": {
+                        "index": 0,
+                        "text": "775,683,246"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "total_deaths"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Total Deaths"
+              },
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "7055166": {
+                        "index": 0,
+                        "text": "7,055,166"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 10,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "cellHeight": "md",
+        "footer": {
+          "countRows": false,
+          "enablePagination": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "frameIndex": 1,
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "11.1.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "marcusolsson-csv-datasource",
+            "uid": "ddqhfanjdep6od"
+          },
+          "decimalSeparator": ".",
+          "delimiter": ",",
+          "header": true,
+          "ignoreUnknown": false,
+          "path": "Death_Percentage_01.csv",
+          "refId": "A",
+          "schema": [
+            {
+              "name": "deathpercentage",
+              "type": "number"
+            }
+          ],
+          "skipRows": 0
+        }
+      ],
+      "title": "Global Numbers",
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-csv-datasource",
+        "uid": "ddqhfanjdep6od"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "percentpopulationinfected"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Percent Population Infected"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "mode": "continuous-YlRd"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "location"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Location"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "population"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Population"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "highestinfectioncount"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Highest Infection Count"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 14,
+        "x": 10,
+        "y": 0
+      },
+      "id": 3,
+      "options": {
+        "basemap": {
+          "config": {},
+          "name": "Layer 0",
+          "tooltip": false,
+          "type": "default"
+        },
+        "controls": {
+          "mouseWheelZoom": true,
+          "showAttribution": false,
+          "showDebug": false,
+          "showMeasure": false,
+          "showScale": false,
+          "showZoom": true
+        },
+        "layers": [
+          {
+            "config": {
+              "showLegend": true,
+              "style": {
+                "color": {
+                  "field": "percentpopulationinfected",
+                  "fixed": "dark-green"
+                },
+                "opacity": 0.5,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "field": "percentpopulationinfected",
+                  "fixed": 5,
+                  "max": 5,
+                  "min": 5
+                },
+                "symbol": {
+                  "fixed": "img/icons/marker/circle.svg",
+                  "mode": "fixed"
+                },
+                "symbolAlign": {
+                  "horizontal": "center",
+                  "vertical": "center"
+                },
+                "text": {
+                  "fixed": "",
+                  "mode": "fixed"
+                },
+                "textConfig": {
+                  "fontSize": 12,
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "filterData": {
+              "id": "byRefId",
+              "options": "C"
+            },
+            "location": {
+              "lookup": "location",
+              "mode": "lookup"
+            },
+            "name": "Percent Population Infected",
+            "opacity": 1,
+            "tooltip": true,
+            "type": "markers"
+          }
+        ],
+        "tooltip": {
+          "mode": "details"
+        },
+        "view": {
+          "allLayers": true,
+          "id": "fit",
+          "lastOnly": false,
+          "lat": 0,
+          "layer": "Layer 1",
+          "lon": 0,
+          "zoom": 15
+        }
+      },
+      "pluginVersion": "11.1.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "marcusolsson-csv-datasource",
+            "uid": "ddqhfanjdep6od"
+          },
+          "decimalSeparator": ".",
+          "delimiter": ",",
+          "header": true,
+          "hide": false,
+          "ignoreUnknown": false,
+          "path": "Country Infection Rate 03.csv",
+          "refId": "C",
+          "schema": [
+            {
+              "name": "location",
+              "type": "string"
+            },
+            {
+              "name": "population",
+              "type": "number"
+            },
+            {
+              "name": "highestinfectioncount",
+              "type": "number"
+            },
+            {
+              "name": "percentpopulationinfected",
+              "type": "number"
+            }
+          ],
+          "skipRows": 0
+        }
+      ],
+      "title": "Total Infection by Country",
+      "type": "geomap"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-csv-datasource",
+        "uid": "ddqhfanjdep6od"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-RdYlGr"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisGridShow": true,
+            "axisLabel": "Total Death Count",
+            "axisPlacement": "left",
+            "axisSoftMax": 2500000,
+            "axisSoftMin": 0,
+            "fillOpacity": 81,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 2,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "semi-dark-blue",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "location"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Location"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "totaldeathcount"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Total Death Count"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 10,
+        "x": 0,
+        "y": 4
+      },
+      "id": 2,
+      "options": {
+        "barRadius": 0.3,
+        "barWidth": 0.79,
+        "colorByField": "totaldeathcount",
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "orientation": "vertical",
+        "showValue": "always",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        },
+        "xField": "location",
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "11.1.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "marcusolsson-csv-datasource",
+            "uid": "ddqhfanjdep6od"
+          },
+          "decimalSeparator": ".",
+          "delimiter": ",",
+          "header": true,
+          "hide": false,
+          "ignoreUnknown": false,
+          "path": "Continet Deathcount 02.csv",
+          "refId": "B",
+          "schema": [
+            {
+              "name": "location",
+              "type": "string"
+            },
+            {
+              "name": "totaldeathcount",
+              "type": "number"
+            }
+          ],
+          "skipRows": 0
+        }
+      ],
+      "title": "Total Death Count per Continent",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-csv-datasource",
+        "uid": "ddqhfanjdep6od"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#8d9fbd",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Avg. Percent Population Infected",
+            "axisPlacement": "left",
+            "axisWidth": 40,
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 1,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 2,
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "__systemRef": "hideSeriesFrom",
+            "matcher": {
+              "id": "byNames",
+              "options": {
+                "mode": "exclude",
+                "names": [
+                  "percentpopulationinfected United Kingdom"
+                ],
+                "prefix": "All except:",
+                "readOnly": true
+              }
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": true,
+                  "tooltip": false,
+                  "viz": true
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "percentpopulationinfected United States"
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                }
+              },
+              {
+                "id": "displayName",
+                "value": "United States"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "super-light-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "percentpopulationinfected Japan"
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                }
+              },
+              {
+                "id": "displayName",
+                "value": "Japan"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "super-light-red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "percentpopulationinfected Europe"
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                }
+              },
+              {
+                "id": "displayName",
+                "value": "Europe"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "super-light-purple",
+                  "mode": "shades"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "percentpopulationinfected Canada"
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                }
+              },
+              {
+                "id": "displayName",
+                "value": "Canada"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "light-yellow",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "percentpopulationinfected United Kingdom"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "United Kingdom"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "orange",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "date"
+            },
+            "properties": [
+              {
+                "id": "custom.axisLabel",
+                "value": "Months"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 12
+      },
+      "id": 4,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "timezone": [
+          "utc"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "asc"
+        }
+      },
+      "pluginVersion": "11.1.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "marcusolsson-csv-datasource",
+            "uid": "ddqhfanjdep6od"
+          },
+          "decimalSeparator": ".",
+          "delimiter": ",",
+          "header": true,
+          "hide": false,
+          "ignoreUnknown": false,
+          "path": "table4.csv",
+          "refId": "D",
+          "schema": [
+            {
+              "name": "location",
+              "type": "string"
+            },
+            {
+              "name": "population",
+              "type": "number"
+            },
+            {
+              "name": "date",
+              "type": "time"
+            },
+            {
+              "name": "highestinfectioncount",
+              "type": "number"
+            },
+            {
+              "name": "percentpopulationinfected",
+              "type": "number"
+            }
+          ],
+          "skipRows": 0
+        }
+      ],
+      "title": "Percent Population Infected",
+      "transformations": [
+        {
+          "id": "prepareTimeSeries",
+          "options": {
+            "format": "multi"
+          }
+        }
+      ],
+      "type": "timeseries"
+    }
+  ],
+  "schemaVersion": 39,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "2020-01-01T00:00:00.000Z",
+    "to": "2024-06-23T00:00:00.000Z"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Data Visual",
+  "uid": "edqigsqu9czk0c",
+  "version": 30,
+  "weekStart": ""
+}
