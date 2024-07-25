@@ -1,4 +1,4 @@
-# Data Analyst Portfolio Project
+# COVID Data Visualization Project
 
 This portfolio project showcases my skills as a data analyst using Grafana a data visualization tool. The project involves analyzing 
 COVID-19 data that was cleaned from my [previous project](https://github.com/Half4376/COVID-Data-Exploration-Project),
