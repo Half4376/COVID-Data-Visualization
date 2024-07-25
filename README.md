@@ -4,7 +4,7 @@ This portfolio project showcases my skills as a data analyst using Grafana a dat
 COVID-19 data that was cleaned from my [previous project](https://github.com/Half4376/COVID-Data-Exploration-Project),
 creating insightful visualizations, and demonstrating the ability to handle and transform data from different sources.
 
-![COVID Dashboard](../Images/COVID Dashboard.png)
+![COVID Dashboard](Images/COVID%20Dashboard.png)
 
 ## Table of Contents
 - [Project Overview](#project-overview)
