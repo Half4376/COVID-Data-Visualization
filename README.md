@@ -4,7 +4,7 @@ This portfolio project showcases my skills as a data analyst using Grafana a dat
 COVID-19 data that was cleaned from my [previous project](https://github.com/Half4376/COVID-Data-Exploration-Project),
 creating insightful visualizations, and demonstrating the ability to handle and transform data from different sources.
 
-![COVID Dashboard](Images/COVID%20Dashboard.png)
+[![COVID Dashboard](Images/COVID%20Dashboard.png)](http://localhost:3000/dashboard/snapshot/Jr9dhu9wnVK0pX4aLl0uc8Tov5rpssin?orgId=0)
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -88,4 +88,4 @@ Using Grafana, the following visualizations were created:
 This project demonstrates my ability to analyze and visualize data using PostgreSQL, Excel, and Grafana. The skills showcased include data querying, 
 cleaning, transformation, and creating insightful visualizations to drive data-driven decisions.
 
-Feel free to explore the visualizations and PostgresSQL queries provided. Your feedback is welcome!
+Feel free to explore the [visualizations](http://localhost:3000/dashboard/snapshot/Jr9dhu9wnVK0pX4aLl0uc8Tov5rpssin?orgId=0) and PostgresSQL queries provided. Your feedback is welcome!
